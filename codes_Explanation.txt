@@ -1,0 +1,186 @@
+Git is a software(version control system) for creating checkpoints so that we can track files for changes and get back to it if required
+
+Github is a collabration platform for hosting projects and keeps all relevant repositiries inside
+
+Repository = folder = collection of files
+
+Code:-
+
+# pwd (tells present working directory information)
+
+
+1.     cd 
+
+(gives name and information of the folder we are currently in)
+
+# cd one
+
+(will go inside folder one)
+
+2.      git -- version
+
+(gives information regarding the version of git we are using)
+
+
+3.      git status  (green = tracked; red = untracked)
+
+(gives information regarding folders status)
+
+###### Your Config Settings:-
+
+
+4.  git config --global user.email "your-email@example.com"
+
+ (git provides a configuration file at global level and we want to set our email at global level)
+
+ #   git config --global user.name "Your Name"
+
+(same for username to save users info)
+
+# git config --list
+
+(gives information about the changes and savings in users configuration)
+
+# git config --global init.defaultBranch <name>
+
+(to change the default branch name)
+
+(Note:- names commonly choosen instead of 'master' are 'main', 'trunk', and 'development')
+
+ The just-created branch can be renamed via this command:
+
+# git branch -m <name>
+
+
+##### Creating a repository:-
+
+Always first use git status because it will show you the current state of your repository when u create a new folder on your system and initialize it as a git repository 
+
+# git status
+
+5. git init  
+
+(This adds .git folder to your project and trackin of folders has been started)
+
+
+### Flow :-
+
+Write -->  Addd  --> Commit
+
+git init --> Working Repository --> git add --> Staging Area --> git commit --> Repository --> git push --> Github
+
+########## How to go to Stagging Area:- 
+Staging is a way to tell git to track a particular file or folder.
+
+First we use git init 
+
+# git init
+
+6.  git add <file> <file2>
+
+(We write the names of the files we want to sel to the stagging Area)
+
+ #  git add .
+
+(Use to send all files in stagging Area at once)
+
+(to unstag a file we use):-
+
+# git rm --cached <file>
+
+
+################# How to Commit:-
+
+7.  git commit -m "first commit" 
+
+
+## How to see what all commits took place:-
+
+8.  git log
+
+(But if we dont want to see all such logs we use flags as:-)
+
+git log --oneline
+
+(Git tells to work on atomic commits focus on 1 thing at a timw eg:- 1 footer banake commit krdo, etc)
+
+(Note :- Commit message must be like :- {Present tense, Imperative} = Give order to the code base; eg:- Add footer to the code base)
+
+##### how to change default code editor:-
+
+9. git config --global core.editor "code --wait"
+
+(Default code editor is vim writting above code we change code editor to vs code)
+
+###### Learn about Git Branches and Conflicts:-
+
+Branches are a way to work on different versions of a project at the time.
+They allow us to create a seperate line of development that can be worked on independently of the main branch
+This can be useful when we want to make changes to a project withoout affecting the main branch or when we want to work on a new feature or bug fix
+
+           
+   (blue)         0-----0------0
+                /
+               /       
+  (main) 0-----0----0--0---0--0---0---0
+              \
+               \
+(green)          0----------0--------0
+                             \
+                              \
+(pink)                         0------0
+
+#Head in git:-
+
+  Head is pointer that points to the current branch that we  are working on ; it points to the latest commit in the current branch
+
+###### Lean about branches:-
+
+10. git branch
+
+(points to the default branch)
+
+ # git branch bug-fix(name)
+
+(will create a new branch named bug-fix)
+
+ # git switch big-fix(name)
+
+ (will switch us to bug-fix, head will point at bug-fix)
+
+# git switch -c dark-mode
+
+ (will directly create a new branch named 'dark-mode' but also will switch to it)
+
+# git checkout orange-mode
+
+(will switch to branch named orange-mode)
+
+(Note: Orange mode should be pre - exsisting)
+
+
+##### Merging Branches:-
+
+10. git merge bug-fix
+
+(merges bug-fix branch with master)
+
+# Rename a Branch:-
+
+11. git branch -m <old-branch name> <new - branch name>
+
+# Delete a branch:-
+
+12.   git branch -d <branch-name>
+
+# Checkout a branch:-
+
+13.  git checkout <branch-name>
+
+# List all branches:-
+
+14.  git branch
+
+####### Pushing Code to Gthub:-
+
+
